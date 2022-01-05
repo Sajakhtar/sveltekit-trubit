@@ -36,3 +36,27 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+
+## To Do
+
+- install Tailwindcss
+- try tailwindui components based on invision wireframes
+  - navbar
+  - sidebar
+  - dashboard
+  - based on invision wireframes
+- install supabase
+  - brand accounts schema tables
+  - seed data
+- install
+- Homepage
+- Brand
+  - landing page
+  - homebase
+  - create campaign
+  - create audience
+- User placeholder
+  - landing page
+  - install stacks.js, login
+  - gallery display NFTs from wallet
