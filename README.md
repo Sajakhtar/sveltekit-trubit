@@ -60,3 +60,4 @@ npm run build
   - landing page
   - install stacks.js, login
   - gallery display NFTs from wallet
+- Error pages 404, 500
