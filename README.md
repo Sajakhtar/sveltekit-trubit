@@ -46,6 +46,8 @@ npm run build
   - sidebar
   - dashboard
   - based on invision wireframes
+- Daisy UI
+  - light, dark themes, theme switcher
 - install supabase
   - brand accounts schema tables
   - seed data
