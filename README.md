@@ -63,3 +63,27 @@ npm run build
   - install stacks.js, login
   - gallery display NFTs from wallet
 - Error pages 404, 500
+
+
+## Sitemap
+
+- Homepage
+  - Business Landing Page (Signin - Supabase magic)
+    - Dashboard
+    - Create Audience
+      - Purchase drawer (Stripe checkout, invoicing?)
+    - Create Campaign
+      - creative drawer
+  - Consumer Landing Page (connect wallet)
+    - NFT gallery
+  - Education Portal
+    - Brand Series/ tags
+    - Consumer Series/ tags
+  - Thoughtpieces/ Whitepapers
+  - FAQ
+    - Business FAQ
+    - Consumer FAQ
+  - T&Cs
+  - About
+  - Contact
+  - Careers
