@@ -63,7 +63,7 @@ npm run build
   - install stacks.js, login
   - gallery display NFTs from wallet
 - Error pages 404, 500
-
+- Deploy on Vercel
 
 ## Sitemap
 
