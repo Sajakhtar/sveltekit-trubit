@@ -69,6 +69,7 @@ npm run build
 
 - Homepage
   - Business Landing Page (Signin - Supabase magic)
+    - Account (update, delete, download data)
     - Dashboard
     - Create Audience
       - Purchase drawer (Stripe checkout, invoicing?)
