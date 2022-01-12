@@ -58,6 +58,7 @@ npm run build
   - homebase
   - create campaign
   - create audience
+  - Fund Fiat Wallet (stripe/sqaure)
 - User placeholder
   - landing page
   - install stacks.js, login
@@ -69,7 +70,7 @@ npm run build
 
 - Homepage
   - Business Landing Page (Signin - Supabase magic)
-    - Account (update, delete, download data)
+    - Account (update, delete, download data, fund with stripe/square)
     - Dashboard
     - Create Audience
       - Purchase drawer (Stripe checkout, invoicing?)
