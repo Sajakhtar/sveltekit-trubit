@@ -82,7 +82,7 @@ module.exports = {
 Install [`theme-change`](https://github.com/saadeghi/theme-change) package:
 
 ```bash
-npm i theme-change
+npm i -D theme-change
 ```
 
 ### [Supabase](https://supabase.com/)
