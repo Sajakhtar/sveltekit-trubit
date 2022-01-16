@@ -55,6 +55,12 @@ Install using [`svelte-add`](https://github.com/svelte-add/tailwindcss) utility:
 npx svelte-add@latest tailwindcss
 ```
 
+Install Tailwind Typography
+
+```bash
+
+```
+
 ### [DaisyUI](https://daisyui.com/)
 
 ```bash
@@ -71,6 +77,12 @@ module.exports = {
   ],
 
 }
+```
+
+Install [`theme-change`](https://github.com/saadeghi/theme-change) package:
+
+```bash
+npm i theme-change
 ```
 
 ### [Supabase](https://supabase.com/)
