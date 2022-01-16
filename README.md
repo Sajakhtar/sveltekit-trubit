@@ -114,7 +114,7 @@ npm i -D graphql-request graphql
 Place access URL endpoint to a `.env` file which can be accessed in Vite with `import.meta.env.VITE_GRAPHCMS_URL`
 
 ```.env
-VITE_GRAPHCMS_URL=https://myendpoint.com >> .env
+VITE_GRAPHCMS_URL=https://myendpoint.com
 ```
 
 ## To Do
