@@ -164,7 +164,7 @@ VITE_GRAPHCMS_URL=https://myendpoint.com >> .env
       - creative drawer
   - Consumer Landing Page (connect wallet)
     - NFT gallery
-  - Education Portal
+  - Education Portal (blog)
     - Brand Series/ tags
     - Consumer Series/ tags
   - Thoughtpieces/ Whitepapers
