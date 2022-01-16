@@ -132,12 +132,19 @@ VITE_GRAPHCMS_URL=https://myendpoint.com >> .env
   - seed data
 - install
 - Homepage
+  - link to brand landing apge
+  - link to consumer wallet app
+  - Brand login (modal)
+  - if logged in route to homebase /account or /dashboard
 - Brand
   - landing page
   - homebase
-  - create campaign
-  - create audience
-  - Fund Fiat Wallet (stripe/sqaure)
+    - create campaign (could be in modal)
+    - create audience (could be in modal)
+    - Fund Fiat Wallet (stripe/sqaure) (could be in modal)
+    - campaigns list
+    - audience list
+  - campaign dashboard
 - User placeholder
   - landing page
   - install stacks.js, login
