@@ -55,7 +55,7 @@ Install using [`svelte-add`](https://github.com/svelte-add/tailwindcss) utility:
 npx svelte-add@latest tailwindcss
 ```
 
-Install Tailwind Typography
+Install [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
 
 ```bash
 npm -D @tailwindcss/typography
