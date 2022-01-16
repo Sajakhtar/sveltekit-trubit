@@ -64,7 +64,7 @@ npm -D @tailwindcss/typography
 ### [DaisyUI](https://daisyui.com/)
 
 ```bash
-npm i daisyui
+npm i -D daisyui
 ```
 
 Update `tailwind.config.js`:
