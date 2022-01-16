@@ -58,7 +58,7 @@ npx svelte-add@latest tailwindcss
 Install Tailwind Typography
 
 ```bash
-
+npm -D @tailwindcss/typography
 ```
 
 ### [DaisyUI](https://daisyui.com/)
