@@ -45,6 +45,65 @@ Using Node Version Manager, use latest stable version of node.
 nvm use v16.13.1
 ```
 
+## Dependancies
+
+### [TailwindCSS](https://tailwindcss.com/)
+
+Install using [`svelte-add`](https://github.com/svelte-add/tailwindcss) utility:
+
+```bash
+npx svelte-add@latest tailwindcss
+```
+
+### [DaisyUI](https://daisyui.com/)
+
+```bash
+npm i daisyui
+```
+
+Update `tailwind.config.js`:
+
+```js
+module.exports = {
+
+  plugins: [
+    require('daisyui'),
+  ],
+
+}
+```
+
+### [Supabase](https://supabase.com/)
+
+Follow the Supabase [guide](https://supabase.com/docs/guides/with-svelte) to setup for svelte.
+
+```bash
+npm install @supabase/supabase-js
+```
+
+Add environment variables in `.env`:
+
+```.env
+SVELTE_APP_SUPABASE_URL=YOUR_SUPABASE_URL
+SVELTE_APP_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+```
+
+### [GraphCMS](https://graphcms.com/)
+
+Follow the GraphCMS [guide](https://graphcms.com/blog/sveltekit-starter-blog-with-graphcms) to setup for SvelteKit.
+
+Install `graphql-request` and `graphql` as dependencies to query the GraphCMS GraphQL API endpoints
+
+```bash
+npm i -D graphql-request graphql
+```
+
+
+Place access URL endpoint to a `.env` file which can be accessed in Vite with `import.meta.env.VITE_GRAPHCMS_URL`
+
+```.env
+VITE_GRAPHCMS_URL=https://myendpoint.com >> .env
+```
 
 ## To Do
 
