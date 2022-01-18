@@ -7,8 +7,8 @@
       <p class="mb-5">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
           </p>
-      <button class="btn btn-primary">Consumers</button>
-      <button class="btn btn-secondary">Brands</button>
+      <a class="btn btn-primary" href="/users">Users</a>
+      <a class="btn btn-secondary" href="/brands">Brands</a>
     </div>
   </div>
 </div>
