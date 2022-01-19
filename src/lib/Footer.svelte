@@ -1,9 +1,9 @@
 <footer class="p-10 footer bg-base-200 text-base-content">
   <div>
     <span class="footer-title">Services</span>
-    <a class="link link-hover">Consumers</a>
-    <a class="link link-hover">Brands</a>
-    <a class="link link-hover" href="/faq" >FAQ</a>
+    <a class="link link-hover" href="/consumers">Consumers</a>
+    <a class="link link-hover" href="/brands">Brands</a>
+    <a class="link link-hover" href="/faq">FAQ</a>
   </div>
   <div>
     <span class="footer-title">Company</span>
