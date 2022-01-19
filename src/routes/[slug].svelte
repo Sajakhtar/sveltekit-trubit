@@ -16,12 +16,17 @@
 
 <script>
   import Footer from '$lib/Footer.svelte'
+  import Nav from '$lib/Nav.svelte'
   export let page
 </script>
 
 <svelte:head>
   <title>{page.title}</title>
 </svelte:head>
+
+<div class="container mx-auto my-4">
+  <Nav />
+</div>
 
 <main class="container max-w-xl mx-auto px-4">
   <article div class="prose">
