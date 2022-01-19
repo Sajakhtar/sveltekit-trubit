@@ -15,6 +15,7 @@
 
 
 <script>
+  import Footer from '$lib/Footer.svelte'
   export let page
 </script>
 
@@ -28,3 +29,5 @@
     {@html page.content.html}
   </article>
 </main>
+
+<Footer />
