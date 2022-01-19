@@ -96,8 +96,8 @@ npm install @supabase/supabase-js
 Add environment variables in `.env`:
 
 ```.env
-SVELTE_APP_SUPABASE_URL=YOUR_SUPABASE_URL
-SVELTE_APP_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+VITE_SUPABASE_URL=YOUR_SUPABASE_URL
+VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 ```
 
 ### [GraphCMS](https://graphcms.com/)
@@ -109,13 +109,20 @@ Install `graphql-request` and `graphql` as dependencies to query the GraphCMS Gr
 ```bash
 npm i -D graphql-request graphql
 ```
+Add environment variables in `.env`:
 
+```.env
+VITE_GRAPHCMS_URL=https://{ZONE}.graphcms.com/v2/{K}/master
+```
 
 Place access URL endpoint to a `.env` file which can be accessed in Vite with `import.meta.env.VITE_GRAPHCMS_URL`
 
 ```.env
 VITE_GRAPHCMS_URL=https://myendpoint.com
 ```
+## Icons
+
+Obtains SVG details for icons from [Bootstracp](https://icons.getbootstrap.com/)
 
 ## To Do
 
