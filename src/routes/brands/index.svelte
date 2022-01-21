@@ -14,7 +14,7 @@
           </p>
     </div>
     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <div class="card-body">
+      <div class="card-body bg-base-200">
         <div class="form-control">
           <label class="label">
             <span class="label-text">Signin or Signup</span>
