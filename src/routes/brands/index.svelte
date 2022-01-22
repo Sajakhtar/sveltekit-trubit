@@ -1,9 +1,12 @@
+<script>
+  import { fade } from 'svelte/transition'
+</script>
 
 <svelte:head>
   <title>Brands</title>
 </svelte:head>
 
-<div class="hero min-h-screen">
+<div class="hero min-h-screen" transition:fade>
   <div class="flex-col justify-center hero-content lg:flex-row">
     <div class="text-center lg:text-left">
       <h1 class="mb-5 text-5xl font-bold">
