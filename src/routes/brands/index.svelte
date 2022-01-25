@@ -1,5 +1,18 @@
 <script>
   import { fade } from 'svelte/transition'
+  import { browser } from '$app/env'
+  import { goto } from '$app/navigation'
+  import { getUser, signIn } from '$lib/auth'
+  import Error from '$lib/Error.svelte'
+
+  const user = getUser()
+  if (browser && user) goto('/brands/account')
+
+  let email = "test@gmail.com"
+  let signInPromise = Promise.resolve({})
+  function handleSignIn() {
+    signInPromise = signIn({ email })
+  }
 </script>
 
 <svelte:head>
@@ -18,15 +31,27 @@
     </div>
     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <div class="card-body bg-base-200">
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Signin or Signup</span>
-          </label>
-          <input type="text" placeholder="Email" class="input input-bordered">
-        </div>
-        <div class="form-control mt-6">
-          <input type="button" value="Get Magic Link" class="btn btn-primary">
-        </div>
+
+        {#await signInPromise}
+          Sending Magic Link to {email}
+        {:then {data, error}}
+          <Error {error} />
+
+          {#if data}
+            <strong class="text-success">Successfully sent Magic Link to {email}</strong>
+          {:else}
+            <form class="form-control" on:submit|preventDefault={handleSignIn}>
+              <label for="email" class="label">
+                <span class="label-text">Signin or Signup</span>
+              </label>
+              <input bind:value={email} id="email" type="Email" placeholder="email" required class="input input-bordered">
+              <input type="button" value="Get Magic Link" class="btn btn-primary mt-6">
+            </form>
+          {/if}
+        {/await}
+        <!-- <div class="form-control mt-6"> -->
+          <!-- <input type="button" value="Get Magic Link" class="btn btn-primary"> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>
