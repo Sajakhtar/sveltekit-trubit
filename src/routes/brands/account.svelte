@@ -1,4 +1,6 @@
 <script>
-
+  import Sidebar from '$lib/Sidebar.svelte'
 </script>
-<h1>My Account</h1>
+
+
+<Sidebar />

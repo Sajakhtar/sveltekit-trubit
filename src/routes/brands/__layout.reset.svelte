@@ -10,9 +10,9 @@
   })
 </script>
 
-<div class="container mx-auto my-4">
+<!-- <div class="container mx-auto my-4">
   <Nav />
-</div>
+</div> -->
 
 <slot />
 
