@@ -1,5 +1,17 @@
 <script>
   import ThemeSelect from "./theme-select.svelte";
+  import { browser } from '$app/env'
+  import { goto } from '$app/navigation'
+  import Error from '$lib/Error.svelte'
+  import { getUser, signIn } from '$lib/auth'
+
+
+  const user = getUser()
+  if (browser && !user) goto('/brands')
+  async function handleSignout() {
+    await signOut()
+    goto('/brands')
+  }
 </script>
 
 <div class="rounded-lg shadow bg-base-200 drawer drawer-mobile h-52 min-h-screen">
@@ -17,7 +29,10 @@
     <label for="my-drawer-2" class="drawer-overlay"></label>
     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
       <li>
-        <ThemeSelect />
+        <div class="flex justify-between">
+          <ThemeSelect />
+          <button on:click={handleSignout} class="btn btn-sm">Sign out</button>
+        </div>
       </li>
       <li>
         <a>Menu Item</a>
