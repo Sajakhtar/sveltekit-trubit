@@ -1,13 +1,13 @@
 <script>
   import ThemeSelect from "./theme-select.svelte";
-  import { browser } from '$app/env'
-  import { goto } from '$app/navigation'
-  import Error from '$lib/Error.svelte'
-  import { getUser, signIn } from '$lib/auth'
+  // import { browser } from '$app/env'
+  // import { goto } from '$app/navigation'
+  // import Error from '$lib/Error.svelte'
+  import { getUser, signOut } from '$lib/auth'
 
 
   const user = getUser()
-  if (browser && !user) goto('/brands')
+  // if (browser && !user) goto('/brands')
   async function handleSignout() {
     await signOut()
     goto('/brands')
