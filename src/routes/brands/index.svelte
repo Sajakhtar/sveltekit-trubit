@@ -4,7 +4,7 @@
   import { goto } from '$app/navigation'
   import { getUser, signIn } from '$lib/auth'
   import Error from '$lib/Error.svelte'
-  import Nav from '$lib/Nav.svelte'
+  // import Nav from '$lib/Nav.svelte'
 
 
   const user = getUser()
@@ -22,9 +22,9 @@
 </svelte:head>
 
 
-<div class="container mx-auto my-4">
+<!-- <div class="container mx-auto my-4">
   <Nav />
-</div>
+</div> -->
 
 <div class="hero min-h-screen" transition:fade>
   <div class="flex-col justify-center hero-content lg:flex-row">
