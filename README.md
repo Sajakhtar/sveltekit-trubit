@@ -128,12 +128,9 @@ Obtains SVG details for icons from [Bootstracp](https://icons.getbootstrap.com/)
 
 - install Tailwindcss
 - try tailwindui components based on invision wireframes
-  - navbar
-  - sidebar
   - dashboard
   - based on invision wireframes
 - Daisy UI
-  - light, dark themes, theme switcher
 - install supabase
   - brand accounts schema tables
   - seed data
@@ -158,6 +155,14 @@ Obtains SVG details for icons from [Bootstracp](https://icons.getbootstrap.com/)
   - gallery display NFTs from wallet
 - Error pages 404, 500
 - Deploy on Vercel
+
+
+Try daisyUI drawer component in all /account pages.
+Move sidebar menu to it's own component
+fix sign in and sign out, and routing
+- supabase sign in url /brands/account
+- sign out - may need to pass handleSignout as props
+  - just need `export let handleSignout` example https://reactgo.com/svelte-props-example/
 
 ## Sitemap
 
