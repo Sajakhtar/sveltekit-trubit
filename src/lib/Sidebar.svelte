@@ -1,8 +1,8 @@
 <script>
   import ThemeSelect from "./theme-select.svelte";
-  // import { browser } from '$app/env'
-  // import { goto } from '$app/navigation'
-  // import Error from '$lib/Error.svelte'
+  import { browser } from '$app/env'
+  import { goto } from '$app/navigation'
+  import Error from '$lib/Error.svelte'
   import { getUser, signOut } from '$lib/auth'
 
 
