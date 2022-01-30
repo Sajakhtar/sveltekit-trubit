@@ -164,6 +164,33 @@ fix sign in and sign out, and routing
 - sign out - may need to pass handleSignout as props
   - just need `export let handleSignout` example https://reactgo.com/svelte-props-example/
 
+Account layout needs a slot
+hardcode the sidebar into the layout and add a slot in the drawer content
+https://linguinecode.com/post/how-to-pass-children-elements-in-svelte
+
+add sidebar drawer component to the layout
+make the drawer content a slot
+
+```html
+<Sidebar>
+  <p>my drawer content</p>
+</Sidebar>
+```
+
+In the sidebar component:
+
+```html
+<div class="flex flex-col items-center justify-center drawer-content">
+    <label for="my-drawer-2" class="mb-4 btn btn-primary drawer-button lg:hidden">open menu</label>
+    <slot />
+    <slot></slot>
+  </div>
+```
+
+
+https://svelte.dev/tutorial/slot-props
+
+
 ## Sitemap
 
 - Homepage
