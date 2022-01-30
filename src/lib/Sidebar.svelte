@@ -30,8 +30,8 @@
     <ul class="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
       <li>
         <div class="flex justify-between items-center">
-          <ThemeSelect />
-          <button on:click={handleSignout} class="btn btn-sm">Sign out</button>
+          <ThemeSelect class="btn"/>
+          <button on:click={handleSignout} class="btn btn-ghost">Sign out</button>
         </div>
       </li>
       <li>
