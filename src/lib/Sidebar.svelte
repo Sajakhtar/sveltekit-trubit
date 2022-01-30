@@ -28,7 +28,7 @@
   <div class="drawer-side">
     <label for="my-drawer-2" class="drawer-overlay"></label>
     <ul class="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
-      <li>
+      <li class="border-b-2 border-neutral">
         <div class="flex justify-between items-center">
           <ThemeSelect class="btn"/>
           <button on:click={handleSignout} class="btn btn-ghost">Sign out</button>
