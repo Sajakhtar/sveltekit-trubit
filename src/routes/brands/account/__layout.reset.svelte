@@ -10,4 +10,7 @@
 </script>
 
 
-<Sidebar />
+<Sidebar>
+  <p>Hello from layout</p>
+  <slot />
+</Sidebar>

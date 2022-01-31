@@ -10,5 +10,4 @@
 
 </script>
 
-
-<!-- <Sidebar /> -->
+<p>Hello from account homebase</p>

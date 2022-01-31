@@ -10,4 +10,4 @@
 
 </script>
 
-<h1>Campaigns</h1>
+<p>Hello from campaigns</p>
