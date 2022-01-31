@@ -53,7 +53,7 @@
               <label for="email" class="label">
                 <span class="label-text">Signin or Signup</span>
               </label>
-              <input bind:value={email} id="email" type="Email" placeholder="email" required class="input input-bordered">
+              <input bind:value={email} id="email" type="Email" placeholder="email" required class="input input-bordered bg-transparent">
               <input type="button" value="Get Magic Link" class="btn btn-primary mt-6">
             </form>
           {/if}
