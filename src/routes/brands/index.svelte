@@ -36,8 +36,10 @@
             Your Web3 portal to interact with existing customer in novel ways and reach new audiences.
           </p>
     </div>
-    <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <div class="card-body bg-base-200">
+    <!-- <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"> -->
+      <!-- <div class="card-body bg-base-200"> -->
+        <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-netural bg-opacity-60 glass">
+      <div class="card-body">
 
         {#await signInPromise}
           Sending Magic Link to {email}
