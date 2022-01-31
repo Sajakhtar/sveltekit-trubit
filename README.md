@@ -188,6 +188,8 @@ In the sidebar component:
 ```
 
 
+Move 'open menu' button to top left and have it as a menu icon
+
 https://svelte.dev/tutorial/slot-props
 
 
