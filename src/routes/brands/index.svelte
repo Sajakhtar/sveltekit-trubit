@@ -10,7 +10,8 @@
   const user = getUser()
   if (browser && user) goto('/brands/account')
 
-  let email = "test@gmail.com"
+  // let email = "test@gmail.com"
+  let email
   let signInPromise = Promise.resolve({})
   function handleSignIn() {
     signInPromise = signIn({ email })
@@ -54,7 +55,7 @@
                 <span class="label-text">Signin or Signup</span>
               </label>
               <input bind:value={email} id="email" type="Email" placeholder="email" required class="input input-bordered bg-transparent">
-              <input type="button" value="Get Magic Link" class="btn btn-primary mt-6">
+              <button class="btn btn-primary mt-6">Get Magic Link</button>
             </form>
           {/if}
         {/await}
