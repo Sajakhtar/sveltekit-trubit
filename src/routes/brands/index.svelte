@@ -26,7 +26,7 @@
   <Nav />
 </div> -->
 
-<div class="hero min-h-screen" transition:fade>
+<div class="hero min-h-screen overflow-hidden bg-gradient-to-br from-primary to-secondary" transition:fade>
   <div class="flex-col justify-center hero-content lg:flex-row">
     <div class="text-center lg:text-left">
       <h1 class="mb-5 text-5xl font-bold">

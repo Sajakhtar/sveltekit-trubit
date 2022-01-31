@@ -10,7 +10,8 @@
   })
 </script>
 
-<div class="container mx-auto my-4">
+<!-- <div class="container mx-auto my-4"> -->
+<div class="container mx-auto">
   <Nav />
 </div>
 

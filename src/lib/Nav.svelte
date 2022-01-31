@@ -2,7 +2,8 @@
   import ThemeSelect from "./theme-select.svelte";
 </script>
 
-<div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+<!-- <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box"> -->
+<div class="navbar mb-2 border-b border-transparent bg-transparent text-base-content fixed w-full inset-x-0 top-0 z-50 transition duration-200 ease-in-out">
   <div class="px-2 mx-2 navbar-start">
     <span class="text-lg font-bold">
             TRUBIT
