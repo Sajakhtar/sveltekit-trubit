@@ -13,7 +13,7 @@
   <label class="label">
     <span class="label-text">Audience attributes</span>
   </label>
-  <input on:focus={() => isFocused = true} on:blue={() => isFocused = false} bind:value={search} placeholder="Search" class="input input-bordered w-full" type="text">
+  <input on:focus={() => isFocused = true} on:blur={() => isFocused = false} bind:value={search} placeholder="Search" class="input input-bordered w-full" type="text">
 </div>
 
 {#if isFocused}
