@@ -28,7 +28,7 @@
   <Nav />
 </div>
 
-<main class="container max-w-xl mx-auto px-4">
+<main class="container max-w-xl mx-auto px-4 mt-32">
   <article div class="prose">
     <!-- Tailwind typography Prose styles the content  -->
     {@html page.content.html}
