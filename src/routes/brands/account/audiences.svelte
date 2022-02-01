@@ -40,7 +40,7 @@
 {/if}
 
 <!--  onClick: save to DB -->
-<button class="btn btn-sm btn-accent w-20">Save</button>
+<button class="btn btn-sm btn-accent w-20 my-4">Save</button>
 
 <h3 class="text-2xl my-4">Saved audiences</h3>
 <p><em>add a table component here</em></p>
