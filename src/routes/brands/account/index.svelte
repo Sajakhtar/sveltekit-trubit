@@ -7,4 +7,8 @@
   if (browser && user) goto('/brands/account')
 </script>
 
-<p>Hello from account homebase</p>
+<svelte:head>
+  <title>Homebase</title>
+</svelte:head>
+
+<h1 class="text-5xl mb-8">Homebase</h1>

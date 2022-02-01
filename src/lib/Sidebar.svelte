@@ -16,7 +16,8 @@
 
 <div class="rounded-lg shadow bg-base-200 drawer drawer-mobile h-52 min-h-screen">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle">
-  <div class="flex flex-col items-center justify-center drawer-content">
+  <!-- <div class="flex flex-col items-center justify-center drawer-content"> -->
+  <div class="flex flex-col p-4 drawer-content">
     <!-- <label for="my-drawer-2" class="mb-4 btn btn-primary drawer-button lg:hidden">open menu</label> -->
     <label for="my-drawer-2" class="mb-4 btn btn-neutral btn-outline btn-square drawer-button lg:hidden absolute top-4 left-4">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
