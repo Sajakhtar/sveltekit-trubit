@@ -1,6 +1,7 @@
 <script>
+  import { fade } from 'svelte/transition'
   export let dataCategories
-  let search = ""
+  export let search = ""
   let isFocused = false
 
   $: filteredDataCategories = dataCategories.filter((category) => {
@@ -17,9 +18,23 @@
 </div>
 
 {#if isFocused}
-  <ul>
+  <ul transition:fade={{duration: 200}}  class="menu w-64 border bg-base-100 menu-compact lg:menu-normal rounded-box overflow-auto">
     {#each filteredDataCategories as dataCategory}
-      <li on:click={() => search = dataCategory}>{dataCategory}</li>
+      <li transition:fade={{duration: 200}} on:click={() => {
+        search = dataCategory
+        isFocused = false
+      }}><a class="border-b">
+        <!-- {dataCategory} -->
+        <div class="collapse w-96 collapse-arrow">
+          <input type="checkbox">
+          <div class="collapse-title">
+            {dataCategory}
+          </div>
+          <div class="collapse-content">
+            <p>attributes</p>
+          </div>
+        </div>
+      </a></li>
     {/each}
   </ul>
 {/if}

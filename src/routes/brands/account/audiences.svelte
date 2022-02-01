@@ -1,15 +1,13 @@
 <script>
   import SearchFilter from "$lib/SearchFilter.svelte";
-  // fetch audience attributes from Supabase
-    // use placeholder hardcoded array for now
-  // add search filter
-  // multi select
-  // save to svelte store
-  // attribute value multi select
-  // save to svelte store
-  // then save to DB
 
-  let dataCategories = ['Gender', 'Geolocation', 'Age', 'Income bracket']
+  export let search = ""
+
+  let dataCategories = ['Gender', 'Geolocation', 'Age', 'Income bracket', 'Interests', 'Affinities']
+
+  // turn into JSON level 1 cat, level 2 attr
+  // remove ul menu
+  // ul > li > collapse > attr with checkbox (onCheck save Cat and attr)
 
   // let data = {
   //   Gender: ['male', 'female', ]
@@ -32,12 +30,16 @@
   <input type="text" placeholder="Audience" required class="input input-bordered">
 </div>
 
-<SearchFilter {dataCategories} />
+<SearchFilter {dataCategories} bind:search />
 
 <h3 class="text-xl my-4"> Audience Definition</h3>
 <p><em>add selected audience attributes</em></p>
 
+{#if search}
+  <p class="my-2 text-secondary">{search}</p>
+{/if}
 
+<!--  onClick: save to DB -->
 <button class="btn btn-sm btn-accent w-20">Save</button>
 
 <h3 class="text-2xl my-4">Saved audiences</h3>
