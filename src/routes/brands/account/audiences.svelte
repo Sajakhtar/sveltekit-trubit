@@ -93,9 +93,11 @@
 <hr/>
 <h3 class="text-xl my-4">Chosen Audience Attributes</h3>
 
-<div class="border rounded-md bg-base-100 p-4">
-  <ul>
-    {#each Object.keys(attributes) as category}
+
+{#if Object.values(attributes).flat().length > 0}
+  <div class="border rounded-box border-base-300 bg-base-100 p-4">
+    <ul>
+      {#each Object.keys(attributes) as category}
       {#each attributes[category] as attribute}
       <li>
         <label>
@@ -104,6 +106,7 @@
         </label>
       </li>
       {/each}
-    {/each}
-  </ul>
-</div>
+      {/each}
+    </ul>
+  </div>
+{/if}
