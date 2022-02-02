@@ -9,25 +9,23 @@
   // remove ul menu
   // ul > li > collapse > attr with checkbox (onCheck save Cat and attr)
 
-  // let data = {
-  //   Gender: ['male', 'female', ]
-  // }
 
   // https://support.google.com/displayvideo/answer/6021489?hl=en#zippy=%2Cavailable-affinity-audiences-in-display-video
-  let categories = {
-    genders: ['Male', 'Female'],
-    ages: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
-    geolocations: ['Richmond', 'Chicago', 'Miami', 'Dubai'],
-    incomes: ['less than $50k per annum', '$50k-$74k per annum', '$75k-$100k per annum', '$100k+ per annum', 'High net worth'],
-    affinities: ['Cooking Enthusiasts', 'Avid Investors', 'Frequently Dines Out', 'Fashionistas', 'Outdoor Enthusiasts']
+  let data = {
+    Gender: ['Male', 'Female'],
+    Age: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
+    Geolocation: ['Richmond', 'Chicago', 'Miami', 'Dubai'],
+    Income: ['less than $50k per annum', '$50k-$74k per annum', '$75k-$100k per annum', '$100k+ per annum', 'High net worth'],
+    Affinity: ['Cooking Enthusiasts', 'Avid Investors', 'Frequently Dines Out', 'Fashionistas', 'Outdoor Enthusiasts']
   }
 
+  let categories = Object.keys(data)
 
   let attributes = {
-    ages: [],
+    // age: [],
   }
 
-  // let attributes = []
+  categories.forEach((category) => attributes[category] = [])
 
 </script>
 
@@ -37,7 +35,7 @@
 
 <h1 class="text-5xl mb-8">Audiences</h1>
 
-<h2 class="text-2xl my-4">Create Audience</h2>
+<h2 class="text-2xl my-4">Create audience</h2>
 
 <div class="form-control">
   <label class="label">
@@ -65,26 +63,54 @@
 
 <hr/>
 <h3 class="text-2xl my-4">Experiments</h3>
+
+
 <h3 class="text-xl my-4">Select Attributes</h3>
 
-{#each categories.ages as age}
+<!-- {#each categories['age'] as attribute}
   <label>
-    <input type="checkbox" bind:group={attributes.ages} value={age}>
-    <span class="label-text">{age}</span>
+    <input type="checkbox" bind:group={attributes['age']} value={attribute}>
+    <span class="label-text">{attribute}</span>
   </label>
-{/each}
+{/each} -->
+
+
+<div>
+  {#each categories as category}
+      <div class="collapse w-96 border rounded-box border-base-300 collapse-arrow my-2">
+        <input type="checkbox">
+        <div class="collapse-title text-xl font-medium">
+          {category}
+        </div>
+        <div class="collapse-content">
+          <ul>
+            {#each data[category] as attribute}
+              <li>
+                <label>
+                  <input type="checkbox" bind:group={attributes[category]} value={attribute}>
+                  <span class="label-text">{attribute}</span>
+                </label>
+              </li>
+            {/each}
+          </ul>
+        </div>
+      </div>
+  {/each}
+  </div>
+
 
 <hr/>
-<h3 class="text-xl my-4">Chosen Attributes</h3>
+<h3 class="text-xl my-4">Chosen Audience Attributes</h3>
 
-
-  <ul>
-    {#each attributes.ages as attribute}
+<ul>
+  {#each Object.keys(attributes) as category}
+    {#each attributes[category] as attribute}
     <li>
       <label>
-        <input type="checkbox" bind:group={attributes.ages} value={attribute}>
-        <span class="label-text">Ages: {attribute}</span>
+        <input type="checkbox" bind:group={attributes[category]} value={attribute}>
+        <span class="label-text">{category}: {attribute}</span>
       </label>
     </li>
     {/each}
-  </ul>
+  {/each}
+</ul>
