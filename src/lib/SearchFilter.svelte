@@ -11,31 +11,31 @@
 </script>
 
 
-<div class="reltive">
+<div class="relative">
   <label class="label">
     <span class="label-text">Audience attributes</span>
   </label>
   <input on:focus={() => isFocused = true} on:blur={() => isFocused = false} bind:value={search} placeholder="Search" class="input input-bordered w-full" type="text">
-</div>
 
-{#if isFocused}
-  <ul transition:fade={{duration: 200}}  class="menu w-64 border bg-base-100 menu-compact lg:menu-normal rounded-box overflow-auto absolute  inset-x-100">
-    {#each filteredDataCategories as dataCategory}
-      <li transition:fade={{duration: 200}} on:click={() => {
-        search = dataCategory
-        isFocused = false
-      }}><a class="border-b">
-        <!-- {dataCategory} -->
-        <div class="collapse w-96 collapse-arrow">
-          <input type="checkbox">
-          <div class="collapse-title">
-            {dataCategory}
+  {#if isFocused}
+    <ul transition:fade={{duration: 200}}  class="menu w-64 border bg-base-100 menu-compact lg:menu-normal rounded-box overflow-auto absolute top-24 left-0 z-50">
+      {#each filteredDataCategories as dataCategory}
+        <li transition:fade={{duration: 200}} on:click={() => {
+          search = dataCategory
+          isFocused = false
+        }}><a class="border-b">
+          <!-- {dataCategory} -->
+          <div class="collapse w-96 collapse-arrow">
+            <input type="checkbox">
+            <div class="collapse-title">
+              {dataCategory}
+            </div>
+            <div class="collapse-content">
+              <p>attributes</p>
+            </div>
           </div>
-          <div class="collapse-content">
-            <p>attributes</p>
-          </div>
-        </div>
-      </a></li>
-    {/each}
-  </ul>
-{/if}
+        </a></li>
+      {/each}
+    </ul>
+  {/if}
+</div>
