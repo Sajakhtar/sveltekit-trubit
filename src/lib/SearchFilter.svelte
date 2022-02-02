@@ -11,7 +11,7 @@
 </script>
 
 
-<div>
+<div class="reltive">
   <label class="label">
     <span class="label-text">Audience attributes</span>
   </label>
@@ -19,7 +19,7 @@
 </div>
 
 {#if isFocused}
-  <ul transition:fade={{duration: 200}}  class="menu w-64 border bg-base-100 menu-compact lg:menu-normal rounded-box overflow-auto">
+  <ul transition:fade={{duration: 200}}  class="menu w-64 border bg-base-100 menu-compact lg:menu-normal rounded-box overflow-auto absolute  inset-x-100">
     {#each filteredDataCategories as dataCategory}
       <li transition:fade={{duration: 200}} on:click={() => {
         search = dataCategory
