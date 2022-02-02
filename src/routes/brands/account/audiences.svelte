@@ -49,13 +49,13 @@
 <!--  onClick: save to DB -->
 <button class="btn btn-sm btn-accent w-20 my-4">Save</button>
 
-<h3 class="text-2xl my-4">Saved audiences</h3>
-<p><em>add a table component here</em></p>
+<!-- <h3 class="text-2xl my-4">Saved audiences</h3> -->
+<!-- <p><em>add a table component here</em></p> -->
 
 
 
-<hr/>
-<h3 class="text-2xl my-4">Experiments</h3>
+<!-- <hr/> -->
+<!-- <h3 class="text-2xl my-4">Experiments</h3> -->
 
 
 <!--
@@ -64,9 +64,9 @@
 
 -->
 
-<h3 class="text-xl my-4">Select Attributes</h3>
+<!-- <h3 class="text-xl my-4">Select Attributes</h3> -->
 
-<div>
+<!-- <div>
   {#each categories as category}
       <div class="collapse w-96 border rounded-box border-base-300 collapse-arrow my-2">
         <input type="checkbox">
@@ -104,4 +104,4 @@
     </li>
     {/each}
   {/each}
-</ul>
+</ul> -->
