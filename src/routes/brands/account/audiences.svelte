@@ -81,8 +81,10 @@
   <ul>
     {#each attributes.ages as attribute}
     <li>
-      <input type="checkbox" bind:group={attributes.ages} value={attribute}>
-      Ages: {attribute}
+      <label>
+        <input type="checkbox" bind:group={attributes.ages} value={attribute}>
+        <span class="label-text">Ages: {attribute}</span>
+      </label>
     </li>
     {/each}
   </ul>
