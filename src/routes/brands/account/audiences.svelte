@@ -2,6 +2,7 @@
   import SearchFilter from "$lib/SearchFilter.svelte";
 
   export let search = ""
+  export let isFocused = false
 
   let dataCategories = ['Gender', 'Geolocation', 'Age', 'Income bracket', 'Interests', 'Affinities']
 
@@ -75,6 +76,8 @@
         </div>
         <div class="collapse-content">
           <!-- ******** ADD SEARCH INPUT FOR ATTRIBBUTES ********* -->
+          <input on:focus={() => isFocused = true} on:blur={() => isFocused = false} bind:value={search} placeholder="Search" class="input input-sm input-bordered w-full mb-2" type="text">
+
           <ul>
             {#each data[category] as attribute}
               <li>
