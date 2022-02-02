@@ -1,5 +1,6 @@
 <script>
   import SearchFilter from "$lib/SearchFilter.svelte";
+  import SearchFilter from "$lib/AudienceFilter.svelte";
 
   export let search = ""
   export let isFocused = false
