@@ -13,13 +13,18 @@
   //   Gender: ['male', 'female', ]
   // }
 
+  // https://support.google.com/displayvideo/answer/6021489?hl=en#zippy=%2Cavailable-affinity-audiences-in-display-video
   let categories = {
-    age: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+']
+    genders: ['Male', 'Female'],
+    ages: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
+    geolocations: ['Richmond', 'Chicago', 'Miami', 'Dubai'],
+    incomes: [],
+    affinities: ['Cooking Enthusiasts', 'Avid Investors', 'Frequently Dines Out', 'Fashionistas', 'Outdoor Enthusiasts']
   }
 
 
   let attributes = {
-    age: [],
+    ages: [],
   }
 
   // let attributes = []
@@ -62,9 +67,9 @@
 <h3 class="text-2xl my-4">Experiments</h3>
 <h3 class="text-xl my-4">Select Attributes</h3>
 
-{#each categories.age as age}
+{#each categories.ages as age}
   <label>
-    <input type="checkbox" bind:group={attributes.age} value={age}>
+    <input type="checkbox" bind:group={attributes.ages} value={age}>
     <span class="label-text">{age}</span>
   </label>
 {/each}
@@ -74,11 +79,10 @@
 
 
   <ul>
-    <span class="label-text">Ages:</span>
-    {#each attributes.age as attribute}
+    {#each attributes.ages as attribute}
     <li>
-      <input type="checkbox" bind:group={attributes.age} value={attribute}>
-      {attribute}
+      <input type="checkbox" bind:group={attributes.ages} value={attribute}>
+      Ages: {attribute}
     </li>
     {/each}
   </ul>
