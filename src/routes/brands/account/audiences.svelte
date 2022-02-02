@@ -61,7 +61,7 @@
 <!--
   move to search filtr component
   ul > li > collapse > attr with checkbox (onCheck save Cat and attr)
-
+  attr dropdown needs a search bar
 -->
 
 <h3 class="text-xl my-4">Select Attributes</h3>
@@ -74,6 +74,7 @@
           {category}
         </div>
         <div class="collapse-content">
+          <!-- ******** ADD SEARCH INPUT FOR ATTRIBBUTES ********* -->
           <ul>
             {#each data[category] as attribute}
               <li>
