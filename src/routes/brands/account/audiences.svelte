@@ -13,6 +13,10 @@
   //   Gender: ['male', 'female', ]
   // }
 
+  let categories = {
+    age: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+']
+  }
+
 
   let attributes = {
     age: [],
@@ -57,22 +61,13 @@
 <hr/>
 <h3 class="text-2xl my-4">Experiments</h3>
 <h3 class="text-xl my-4">Select Attributes</h3>
-<label>
-  <input type="checkbox" bind:group={attributes.age} value="18-24">
-  <span class="label-text">18-24</span>
-</label>
-<label>
-  <input type="checkbox" bind:group={attributes.age} value="25-34">
-  <span class="label-text">25-34</span>
-</label>
-<label>
-  <input type="checkbox" bind:group={attributes.age} value="35-44">
-  <span class="label-text">35-44</span>
-</label>
-<label>
-  <input type="checkbox" bind:group={attributes.age} value="45-54">
-  <span class="label-text">45-54</span>
-</label>
+
+{#each categories.age as age}
+  <label>
+    <input type="checkbox" bind:group={attributes.age} value={age}>
+    <span class="label-text">{age}</span>
+  </label>
+{/each}
 
 <hr/>
 <h3 class="text-xl my-4">Chosen Attributes</h3>
