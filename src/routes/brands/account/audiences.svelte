@@ -5,11 +5,6 @@
 
   let dataCategories = ['Gender', 'Geolocation', 'Age', 'Income bracket', 'Interests', 'Affinities']
 
-  // turn into JSON level 1 cat, level 2 attr
-  // remove ul menu
-  // ul > li > collapse > attr with checkbox (onCheck save Cat and attr)
-
-
   // https://support.google.com/displayvideo/answer/6021489?hl=en#zippy=%2Cavailable-affinity-audiences-in-display-video
   let data = {
     Gender: ['Male', 'Female'],
@@ -21,9 +16,7 @@
 
   let categories = Object.keys(data)
 
-  let attributes = {
-    // age: [],
-  }
+  let attributes = {}
 
   categories.forEach((category) => attributes[category] = [])
 
@@ -65,15 +58,13 @@
 <h3 class="text-2xl my-4">Experiments</h3>
 
 
+<!--
+  move to search filtr component
+  ul > li > collapse > attr with checkbox (onCheck save Cat and attr)
+
+-->
+
 <h3 class="text-xl my-4">Select Attributes</h3>
-
-<!-- {#each categories['age'] as attribute}
-  <label>
-    <input type="checkbox" bind:group={attributes['age']} value={attribute}>
-    <span class="label-text">{attribute}</span>
-  </label>
-{/each} -->
-
 
 <div>
   {#each categories as category}
