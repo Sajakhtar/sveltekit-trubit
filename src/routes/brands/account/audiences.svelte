@@ -18,7 +18,7 @@
     genders: ['Male', 'Female'],
     ages: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
     geolocations: ['Richmond', 'Chicago', 'Miami', 'Dubai'],
-    incomes: [],
+    incomes: ['less than $50k per annum', '$50k-$74k per annum', '$75k-$100k per annum', '$100k+ per annum', 'High net worth'],
     affinities: ['Cooking Enthusiasts', 'Avid Investors', 'Frequently Dines Out', 'Fashionistas', 'Outdoor Enthusiasts']
   }
 
