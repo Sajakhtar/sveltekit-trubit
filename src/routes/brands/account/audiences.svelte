@@ -93,15 +93,17 @@
 <hr/>
 <h3 class="text-xl my-4">Chosen Audience Attributes</h3>
 
-<ul>
-  {#each Object.keys(attributes) as category}
-    {#each attributes[category] as attribute}
-    <li>
-      <label>
-        <input type="checkbox" bind:group={attributes[category]} value={attribute}>
-        <span class="label-text">{category}: {attribute}</span>
-      </label>
-    </li>
+<div class="border rounded-md bg-base-100 p-4">
+  <ul>
+    {#each Object.keys(attributes) as category}
+      {#each attributes[category] as attribute}
+      <li>
+        <label>
+          <input type="checkbox" bind:group={attributes[category]} value={attribute}>
+          <span class="label-text">{category}: {attribute}</span>
+        </label>
+      </li>
+      {/each}
     {/each}
-  {/each}
-</ul>
+  </ul>
+</div>
