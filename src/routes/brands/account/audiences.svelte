@@ -13,6 +13,9 @@
   //   Gender: ['male', 'female', ]
   // }
 
+
+  let attributes = []
+
 </script>
 
 <svelte:head>
@@ -44,3 +47,36 @@
 
 <h3 class="text-2xl my-4">Saved audiences</h3>
 <p><em>add a table component here</em></p>
+
+
+
+<hr/>
+<h3 class="text-2xl my-4">Experiments</h3>
+<h3 class="text-xl my-4">Select Attributes</h3>
+<label>
+  <input type="checkbox" bind:group={attributes} value="18-24">
+  <span class="label-text">18-24</span>
+</label>
+<label>
+  <input type="checkbox" bind:group={attributes} value="25-34">
+  <span class="label-text">25-34</span>
+</label>
+<label>
+  <input type="checkbox" bind:group={attributes} value="35-44">
+  <span class="label-text">35-44</span>
+</label>
+<label>
+  <input type="checkbox" bind:group={attributes} value="45-54">
+  <span class="label-text">45-54</span>
+</label>
+
+<hr/>
+<h3 class="text-xl my-4">Chosen Attributes</h3>
+<ul>
+  {#each attributes as attribute}
+    <li>
+      <input type="checkbox" bind:group={attributes} value={attribute}>
+      {attribute}
+    </li>
+  {/each}
+</ul>
