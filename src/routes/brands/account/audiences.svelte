@@ -14,7 +14,11 @@
   // }
 
 
-  let attributes = []
+  let attributes = {
+    age: [],
+  }
+
+  // let attributes = []
 
 </script>
 
@@ -54,29 +58,32 @@
 <h3 class="text-2xl my-4">Experiments</h3>
 <h3 class="text-xl my-4">Select Attributes</h3>
 <label>
-  <input type="checkbox" bind:group={attributes} value="18-24">
+  <input type="checkbox" bind:group={attributes.age} value="18-24">
   <span class="label-text">18-24</span>
 </label>
 <label>
-  <input type="checkbox" bind:group={attributes} value="25-34">
+  <input type="checkbox" bind:group={attributes.age} value="25-34">
   <span class="label-text">25-34</span>
 </label>
 <label>
-  <input type="checkbox" bind:group={attributes} value="35-44">
+  <input type="checkbox" bind:group={attributes.age} value="35-44">
   <span class="label-text">35-44</span>
 </label>
 <label>
-  <input type="checkbox" bind:group={attributes} value="45-54">
+  <input type="checkbox" bind:group={attributes.age} value="45-54">
   <span class="label-text">45-54</span>
 </label>
 
 <hr/>
 <h3 class="text-xl my-4">Chosen Attributes</h3>
-<ul>
-  {#each attributes as attribute}
+
+
+  <ul>
+    <span class="label-text">Ages:</span>
+    {#each attributes.age as attribute}
     <li>
-      <input type="checkbox" bind:group={attributes} value={attribute}>
+      <input type="checkbox" bind:group={attributes.age} value={attribute}>
       {attribute}
     </li>
-  {/each}
-</ul>
+    {/each}
+  </ul>
