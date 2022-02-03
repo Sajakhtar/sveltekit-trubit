@@ -17,6 +17,7 @@
     Age: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
     Geolocation: ['Richmond', 'Chicago', 'Miami', 'Dubai'],
     Income: ['less than $50k per annum', '$50k-$74k per annum', '$75k-$100k per annum', '$100k+ per annum', 'High net worth'],
+    'Mobile OS': ['iOS', 'Android'],
     Affinity: ['Cooking Enthusiasts', 'Foodies', 'Avid Investors', 'Frequently Dines Out', 'Fashionistas', 'Outdoor Enthusiasts', 'Thrill Seekers', 'Shutterbugs', 'Movie Lovers', 'Music Lovers', 'Gamers', 'Pet Lovers', 'Bargain Hunters', 'Luxury Shoppers', 'American Football Fans', 'Basketball Fans', 'Baseball Fans', 'Technophiles', 'Auto Enthusiasts', 'Business Travelers', 'Family Vacationers', 'Luxury Travelers', 'Travel Buffs', 'Avid News Readers', ]
   }
 
