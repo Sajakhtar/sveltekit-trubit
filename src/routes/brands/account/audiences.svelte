@@ -96,19 +96,19 @@
 <!-- {console.log(attributes)} -->
 
 {#if Object.values(attributes).flat().length > 0}
-  <div class="border rounded-box border-base-300 bg-base-100 p-4">
-    <ul>
+  <div class="border rounded-box border-base-300 bg-base-100 p-4 grid grid-cols-2 gap-4">
+    <!-- <ul> -->
       {#each Object.keys(attributes) as category}
         {#each attributes[category] as attribute}
-          <li>
+          <!-- <li> -->
             <label>
               <input type="checkbox" bind:group={attributes[category]} value={attribute}>
               <span class="label-text">{category}: {attribute}</span>
             </label>
-          </li>
+          <!-- </li> -->
         {/each}
       {/each}
-    </ul>
+    <!-- </ul> -->
   </div>
 {/if}
 
