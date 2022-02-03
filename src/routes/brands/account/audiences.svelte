@@ -90,13 +90,13 @@
   </div> -->
 
 
-<hr/>
+<!-- <hr/> -->
 <h3 class="text-xl my-4">Chosen Audience Attributes</h3>
 
 <!-- {console.log(attributes)} -->
 
 {#if Object.values(attributes).flat().length > 0}
-  <div class="border rounded-box border-base-300 bg-base-100 p-4 grid grid-cols-2 gap-4">
+  <div class="border rounded-box border bg-base-100 p-4 grid grid-cols-2 gap-4">
     <!-- <ul> -->
       {#each Object.keys(attributes) as category}
         {#each attributes[category] as attribute}
