@@ -1,5 +1,7 @@
 <script>
   import { fade } from 'svelte/transition'
+  import { clickOutside } from './clickOutside'
+
   export let data
   export let searchCategory = ""
   export let searchAttribute = ""
@@ -22,7 +24,7 @@
 </script>
 
 
-<div class="relative">
+<div class="relative" use:clickOutside on:clickoutside={() => isFocusedCategory = false} >
   <label class="label">
     <span class="label-text">Audience attributes</span>
   </label>
@@ -31,14 +33,14 @@
   {#if isFocusedCategory}
     <div class="border rounded-box border-base-200 bg-base-100 p-2 overflow-auto absolute top-24 left-0 z-50">
       {#each filteredCategories as category}
-          <div class="collapse w-96 border rounded-box border collapse-arrow my-2">
+          <div class="collapse w-96 border rounded-box collapse-arrow my-2">
             <input type="checkbox">
             <div class="collapse-title text-md">
               {category}
             </div>
             <div class="collapse-content">
 
-              <input on:focus={() => isFocusedAttribbute = true} on:blur={() => isFocusedAttribbute = false} bind:value={searchAttribute} placeholder="Search" class="input input-sm input-bordered w-full mb-2" type="text">
+              <input on:focus={() => isFocusedAttribbute = true} on:blur={() => isFocusedAttribbute = false} bind:value={searchAttribute} placeholder="Search" class="input input-sm input-bordered w-full my-2" type="text">
 
               <ul>
                 {#each data[category] as attribute}
