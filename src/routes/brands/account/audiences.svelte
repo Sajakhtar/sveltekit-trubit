@@ -3,6 +3,8 @@
   import AudienceFilter from "$lib/AudienceFilter.svelte";
 
   export let search = ""
+  export let searchCategory = ""
+  export let searchAttribute = ""
   export let isFocused = false
 
   let dataCategories = ['Gender', 'Geolocation', 'Age', 'Income bracket', 'Interests', 'Affinities']
@@ -40,6 +42,7 @@
 </div>
 
 <SearchFilter {dataCategories} bind:search />
+<AudienceFilter {data} bind:searchCategory />
 
 <h3 class="text-xl my-4"> Audience Definition</h3>
 <p><em>add selected audience attributes</em></p>
@@ -76,7 +79,7 @@
           {category}
         </div>
         <div class="collapse-content">
-          <!-- ******** ADD SEARCH INPUT FOR ATTRIBBUTES ********* -->
+
           <input on:focus={() => isFocused = true} on:blur={() => isFocused = false} bind:value={search} placeholder="Search" class="input input-sm input-bordered w-full mb-2" type="text">
 
           <ul>

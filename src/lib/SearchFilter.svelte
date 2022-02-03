@@ -2,7 +2,6 @@
   import { fade } from 'svelte/transition'
   export let dataCategories
   export let search = ""
-  // export let attributes
   let isFocused = false
 
   $: filteredDataCategories = dataCategories.filter((category) => {
