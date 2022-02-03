@@ -51,8 +51,8 @@
                 <!-- {#each data[category] as attribute} -->
                 {#each filteredAttributes(category) as attribute (attribute)}
                   <li>
-                    <label>
-                      <input type="checkbox" bind:group={attributes[category]} value={attribute}>
+                    <label class="flex items-center">
+                      <input type="checkbox" bind:group={attributes[category]} value={attribute} class="checkbox checkbox-xs checkbox-accent mr-2">
                       <span class="label-text">{attribute}</span>
                     </label>
                   </li>
