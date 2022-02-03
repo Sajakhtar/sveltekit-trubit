@@ -1,13 +1,15 @@
 <script>
-  import SearchFilter from "$lib/SearchFilter.svelte";
+  // import SearchFilter from "$lib/SearchFilter.svelte";
   import AudienceFilter from "$lib/AudienceFilter.svelte";
 
-  export let search = ""
+  // export let search = ""
+  // export let isFocused = false
+
   export let searchCategory = ""
   export let searchAttribute = ""
-  export let isFocused = false
+  export let attributes = {}
 
-  let dataCategories = ['Gender', 'Geolocation', 'Age', 'Income bracket', 'Interests', 'Affinities']
+  // let dataCategories = ['Gender', 'Geolocation', 'Age', 'Income bracket', 'Interests', 'Affinities']
 
   // https://support.google.com/displayvideo/answer/6021489?hl=en#zippy=%2Cavailable-affinity-audiences-in-display-video
   let data = {
@@ -18,11 +20,11 @@
     Affinity: ['Cooking Enthusiasts', 'Avid Investors', 'Frequently Dines Out', 'Fashionistas', 'Outdoor Enthusiasts']
   }
 
-  let categories = Object.keys(data)
+  // let categories = Object.keys(data)
 
-  let attributes = {}
+  // export let attributes = {}
 
-  categories.forEach((category) => attributes[category] = [])
+  // categories.forEach((category) => attributes[category] = [])
 
 </script>
 
@@ -41,35 +43,25 @@
   <input type="text" placeholder="Audience" required class="input input-bordered">
 </div>
 
-<SearchFilter {dataCategories} bind:search />
-<AudienceFilter {data} bind:searchCategory />
+<!-- <SearchFilter {dataCategories} bind:search /> -->
+<AudienceFilter {data} bind:attributes bind:searchCategory />
 
-<h3 class="text-xl my-4"> Audience Definition</h3>
-<p><em>add selected audience attributes</em></p>
+<!-- <h3 class="text-xl my-4"> Audience Definition</h3> -->
+<!-- <p><em>add selected audience attributes</em></p> -->
 
-{#if search}
+<!-- {#if search}
   <p class="my-2 text-secondary">{search}</p>
-{/if}
-
-<!--  onClick: save to DB -->
-<button class="btn btn-sm btn-accent w-20 my-4">Save</button>
-
-<h3 class="text-2xl my-4">Saved audiences</h3>
-<p><em>add a table component here</em></p>
+{/if} -->
 
 
 
-<hr/>
-<h3 class="text-2xl my-4">Experiments</h3>
 
 
-<!--
-  move to search filtr component
-  ul > li > collapse > attr with checkbox (onCheck save Cat and attr)
-  attr dropdown needs a search bar
--->
+<!-- <hr/> -->
+<!-- <h3 class="text-2xl my-4">Experiments</h3> -->
 
-<h3 class="text-xl my-4">Select Attributes</h3>
+
+<!-- <h3 class="text-xl my-4">Select Attributes</h3>
 
 <div>
   {#each categories as category}
@@ -95,26 +87,34 @@
         </div>
       </div>
   {/each}
-  </div>
+  </div> -->
 
 
 <hr/>
 <h3 class="text-xl my-4">Chosen Audience Attributes</h3>
 
+<!-- {console.log(attributes)} -->
 
 {#if Object.values(attributes).flat().length > 0}
   <div class="border rounded-box border-base-300 bg-base-100 p-4">
     <ul>
       {#each Object.keys(attributes) as category}
-      {#each attributes[category] as attribute}
-      <li>
-        <label>
-          <input type="checkbox" bind:group={attributes[category]} value={attribute}>
-          <span class="label-text">{category}: {attribute}</span>
-        </label>
-      </li>
-      {/each}
+        {#each attributes[category] as attribute}
+          <li>
+            <label>
+              <input type="checkbox" bind:group={attributes[category]} value={attribute}>
+              <span class="label-text">{category}: {attribute}</span>
+            </label>
+          </li>
+        {/each}
       {/each}
     </ul>
   </div>
 {/if}
+
+
+<!--  onClick: save to DB -->
+<button class="btn btn-sm btn-accent w-20 my-4">Save</button>
+
+<h3 class="text-2xl my-4">Saved audiences</h3>
+<p><em>add a table component here</em></p>

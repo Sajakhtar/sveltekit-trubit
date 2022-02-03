@@ -9,7 +9,7 @@
 
   let categories = Object.keys(data)
 
-  let attributes = {}
+  export let attributes = {}
 
   categories.forEach((category) => attributes[category] = [])
 
@@ -26,7 +26,7 @@
   <label class="label">
     <span class="label-text">Audience attributes</span>
   </label>
-  <input on:focus={() => isFocusedCategory = true} on:blur={() => isFocusedCategory = false} bind:value={searchCategory} placeholder="Search" class="input input-bordered w-full" type="text">
+  <input on:focus={() => isFocusedCategory = true} bind:value={searchCategory} placeholder="Search" class="input input-bordered w-full" type="text">
 
   {#if isFocusedCategory}
     <div class="border rounded-box border-base-200 bg-base-100 p-2 overflow-auto absolute top-24 left-0 z-50">
@@ -38,7 +38,7 @@
             </div>
             <div class="collapse-content">
 
-              <input on:focus={() => isFocused = true} on:blur={() => isFocused = false} bind:value={searchAttribute} placeholder="Search" class="input input-sm input-bordered w-full mb-2" type="text">
+              <input on:focus={() => isFocusedAttribbute = true} on:blur={() => isFocusedAttribbute = false} bind:value={searchAttribute} placeholder="Search" class="input input-sm input-bordered w-full mb-2" type="text">
 
               <ul>
                 {#each data[category] as attribute}
