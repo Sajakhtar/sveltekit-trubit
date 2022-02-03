@@ -101,8 +101,8 @@
       {#each Object.keys(attributes) as category (category)}
         {#each attributes[category] as attribute (attribute)}
           <!-- <li> -->
-            <label>
-              <input type="checkbox" bind:group={attributes[category]} value={attribute}>
+            <label class="flex items-center">
+              <input type="checkbox" bind:group={attributes[category]} value={attribute} class="checkbox checkbox-xs checkbox-secondary mr-2">
               <span class="label-text">{category}: {attribute}</span>
             </label>
           <!-- </li> -->
