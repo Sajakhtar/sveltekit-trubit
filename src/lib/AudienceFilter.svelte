@@ -19,7 +19,13 @@
     return searchCategory === "" || category.toLowerCase().indexOf(searchCategory.toLowerCase()) !== -1
   })
 
-  // $: filteredAttributes =
+
+  $: filteredAttributes = (category) => {
+    return data[category].filter((attribute) => {
+      return searchAttribute === "" || attribute.toLowerCase().indexOf(searchAttribute.toLowerCase()) !== -1
+    })
+  }
+  // need a function
 
 </script>
 
@@ -40,10 +46,11 @@
             </div>
             <div class="collapse-content">
 
-              <input on:focus={() => isFocusedAttribbute = true} on:blur={() => isFocusedAttribbute = false} bind:value={searchAttribute} placeholder="Search" class="input input-sm input-bordered w-full my-2" type="text">
+              <input bind:value={searchAttribute} placeholder="Search" class="input input-sm input-bordered w-full my-2" type="text">
 
               <ul>
-                {#each data[category] as attribute}
+                <!-- {#each data[category] as attribute} -->
+                {#each filteredAttributes(category) as attribute}
                   <li>
                     <label>
                       <input type="checkbox" bind:group={attributes[category]} value={attribute}>
