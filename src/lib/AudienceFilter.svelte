@@ -25,7 +25,6 @@
       return searchAttribute === "" || attribute.toLowerCase().indexOf(searchAttribute.toLowerCase()) !== -1
     })
   }
-  // need a function
 
 </script>
 
