@@ -37,7 +37,7 @@
 
   {#if isFocusedCategory}
     <div class="border rounded-box border-base-200 bg-base-100 p-2 overflow-auto absolute top-24 left-0 z-50">
-      {#each filteredCategories as category}
+      {#each filteredCategories as category (category)}
           <div class="collapse w-96 border rounded-box collapse-arrow my-2">
             <input type="checkbox">
             <div class="collapse-title text-md">
@@ -49,7 +49,7 @@
 
               <ul>
                 <!-- {#each data[category] as attribute} -->
-                {#each filteredAttributes(category) as attribute}
+                {#each filteredAttributes(category) as attribute (attribute)}
                   <li>
                     <label>
                       <input type="checkbox" bind:group={attributes[category]} value={attribute}>
