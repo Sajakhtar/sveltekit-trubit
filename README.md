@@ -124,6 +124,13 @@ VITE_GRAPHCMS_URL=https://myendpoint.com
 
 Obtains SVG details for icons from [Bootstracp](https://icons.getbootstrap.com/)
 
+## Stacks
+- [Stacks.js libraries](https://github.com/hirosystems/stacks.js)
+- [Hiro wallet authentication](https://docs.hiro.so/build-apps/authentication)
+- Hiro tutorials
+  - [To Do App](https://docs.hiro.so/example-apps/to-dos), [repo](https://github.com/hirosystems/todos/blob/master/package.json)
+
+
 ## To Do
 
 - install Tailwindcss
