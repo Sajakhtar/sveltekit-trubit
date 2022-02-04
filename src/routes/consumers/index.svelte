@@ -1,5 +1,6 @@
 <script>
   import { fade } from 'svelte/transition'
+  import { authenticate } from '$lib/stacks-auth';
 </script>
 
 <svelte:head>
@@ -15,7 +16,7 @@
       <p class="mb-5">
             Take ownership of your data and earn bitcoin.
           </p>
-      <button class="btn btn-primary">Connect wallet</button>
+      <button on:click={() => authenticate()} class="btn btn-primary">Connect wallet</button>
     </div>
   </div>
 </div>
