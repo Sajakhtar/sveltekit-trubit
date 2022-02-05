@@ -15,7 +15,7 @@ const config = {
       ssr: {
         // noExternal: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
         // noExternal: []
-        external: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
+        // external: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
       },
       optimizeDeps: {
       //   include: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
