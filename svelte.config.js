@@ -14,12 +14,16 @@ const config = {
     vite: {
       ssr: {
         // noExternal: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
-        // noExternal: []
+        noExternal: ['regenerator-runtime', '@stacks/connect', '@stacks/profile', '@stacks/storage']
         // external: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
+        // external: ['regenerator-runtime', '@stacks/connect', '@stacks/profile', '@stacks/storage']
       },
       optimizeDeps: {
-      //   include: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
-        exclude: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
+        // include: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
+        include: ['regenerator-runtime', '@stacks/connect', '@stacks/profile', '@stacks/storage']
+        // exclude: ['@stacks/connect', '@stacks/profile', '@stacks/storage']
+        // exclude: ['regenerator-runtime', '@stacks/connect', '@stacks/profile', '@stacks/storage']
+        // exclude: ['regenerator-runtime']
       }
     },
 	},
