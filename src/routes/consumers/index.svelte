@@ -1,6 +1,13 @@
 <script>
   import { fade } from 'svelte/transition'
-  import { authenticate } from '$lib/stacks-auth';
+  // import { authenticate } from '$lib/stacks-auth';
+
+  import { showConnect } from '@stacks/connect'
+  import { userSession } from '$lib/stacks-auth';
+
+  const authenticate = () => {
+    console.log('stacks auth')
+  }
 </script>
 
 <svelte:head>
