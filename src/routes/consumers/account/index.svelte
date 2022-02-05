@@ -1,9 +1,9 @@
 <script>
-  import { userSession } from '$lib/stacks-auth';
+  // import { userSession } from '$lib/stacks-auth';
   import { goto } from '$app/navigation'
 
   const handleSignOut = () => {
-    userSession.signUserOut();
+    // userSession.signUserOut();
     // window.location = '/';
     goto('/consumers')
   }

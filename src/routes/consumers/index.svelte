@@ -2,11 +2,14 @@
   import { fade } from 'svelte/transition'
   // import { authenticate } from '$lib/stacks-auth';
 
-  import { showConnect } from '@stacks/connect'
-  import { userSession } from '$lib/stacks-auth';
+  // import { showConnect } from '@stacks/connect'
+  // import { userSession } from '$lib/stacks-auth';
+  import { goto } from '$app/navigation'
+
 
   const authenticate = () => {
     console.log('stacks auth')
+    goto('/consumers/account')
   }
 </script>
 
